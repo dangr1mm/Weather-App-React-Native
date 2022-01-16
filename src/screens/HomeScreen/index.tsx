@@ -46,6 +46,7 @@ const HomeScreen: React.FC = () => {
     <Background resizeMode="cover" source={backgroundImage}>
       <SafeArea>
         <ViewContainer>
+          {/* if the value equals 0, it means no api info was successfully fetched yet */}
           {dt !== 0 ? <WeatherInfoView /> : <WelcomeView />}
           <UpdateWeather />
         </ViewContainer>
