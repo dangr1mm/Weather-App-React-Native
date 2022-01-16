@@ -9,14 +9,6 @@ export interface Location {
   provider?: any;
   verticalAccuracy?: any;
   course?: any;
-  status?: GeolocationStatus;
-}
-
-export interface GeolocationStatus {
-  cancelled: 'CANCELLED';
-  unavailable: 'UNAVAILABLE';
-  timeout: 'TIMEOUT';
-  unauthorized: 'UNAUTHORIZED';
 }
 
 export interface WeatherData {

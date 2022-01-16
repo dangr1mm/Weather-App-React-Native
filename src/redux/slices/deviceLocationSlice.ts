@@ -1,6 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Location} from '../../types';
 
+/*
+  A redux toolkit slice made for storing the device location data from the third party library used
+*/
+
 const initialState: Location = {
   latitude: 0,
   longitude: 0,
@@ -12,7 +16,6 @@ const initialState: Location = {
   provider: null,
   verticalAccuracy: null,
   course: null,
-  status: undefined,
 };
 
 export const deviceLocationSlice = createSlice({
@@ -31,12 +34,8 @@ export const deviceLocationSlice = createSlice({
       state.verticalAccuracy = action.payload.verticalAccuracy;
       state.course = action.payload.course;
     },
-    setLocationStatus: (state, action: PayloadAction<Location>) => {
-      state.status = action.payload.status;
-    },
   },
 });
 
-export const {setDeviceLocation, setLocationStatus} =
-  deviceLocationSlice.actions;
+export const {setDeviceLocation} = deviceLocationSlice.actions;
 export default deviceLocationSlice.reducer;

@@ -18,6 +18,10 @@ import {
 import Icon from 'react-native-vector-icons/Feather';
 import timeFormat from '../../utils/timeFormat';
 
+/*
+  A view for displaying the weather info inside the Home screen
+*/
+
 const WeatherInfoView: React.FC = () => {
   const weatherData = useSelector((state: RootState) => state.weatherData);
 
@@ -31,6 +35,7 @@ const WeatherInfoView: React.FC = () => {
         <WeatherText>{weatherData.weather[0].main}</WeatherText>
         <WeatherIcon
           source={{
+            // uses the icon code provided by the api to fetch an icon from the bellow url
             uri: `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`,
           }}
         />

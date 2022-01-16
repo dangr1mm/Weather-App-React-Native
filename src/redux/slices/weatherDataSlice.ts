@@ -1,6 +1,10 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {WeatherData} from '../../types';
 
+/*
+  A redux toolkit slice for storing the weather data provided by the api.
+*/
+
 const initialState: WeatherData = {
   base: '',
   clouds: {
