@@ -27,7 +27,7 @@ const UpdateWeather: React.FC = () => {
   return (
     <Wrapper onPress={onPressHandle} disabled={isLoading}>
       {isLoading ? (
-        <ActivityIndicator />
+        <ActivityIndicator color="#fff" />
       ) : (
         <ButtonText>Update Weather</ButtonText>
       )}
